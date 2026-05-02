@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="أحدث أخبار الرياضة والترفيه - Latest Sports & Entertainment News" />
+  <meta name="keywords" content="رياضة, كرة قدم, ترفيه, sports, football, entertainment" />
+  <title>سبورت بلس | Sport Plus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ✅ Google AdSense: ضع كود AdSense الخاص بك هنا بعد الموافقة -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+
+  <style>
+    :root {
+      --red: #e63030;
+      --dark: #0a0a0f;
+      --darker: #050508;
+      --card: #111118;
+      --card2: #16161f;
+      --gold: #f5c518;
+      --text: #e8e8f0;
+      --muted: #7a7a9a;
+      --border: #1e1e2e;
+      --accent: #00d4ff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--dark);
+      color: var(--text);
+      font-family: 'Cairo', sans-serif;
+      direction: rtl;
+      overflow-x: hidden;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, var(--darker) 0%, #0d0d1a 100%);
+      border-bottom: 2px solid var(--red);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 30px rgba(230,48,48,0.2);
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 5%;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--red);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-ar {
+      font-size: 20px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .logo-en {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 16px;
+      color: var(--red);
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.2s;
+      border: 1px solid transparent;
+    }
+
+    nav a:hover, nav a.active {
+      background: var(--red);
+      color: #fff;
+    }
+
+    .lang-btn {
+      background: var(--border);
+      border: 1px solid var(--muted);
+      color: var(--text);
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 13px;
+      font-family: 'Cairo', sans-serif;
+      transition: all 0.2s;
+    }
+
+    .lang-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ── TICKER ── */
+    .ticker-wrap {
+      background: var(--red);
+      padding: 8px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .ticker-label {
+      background: #fff;
+      color: var(--red);
+      font-weight: 900;
+      font-size: 13px;
+      padding: 2px 14px;
+      border-radius: 0 4px 4px 0;
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    .ticker-content {
+      display: inline-block;
+      animation: ticker 35s linear infinite;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    @keyframes ticker {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100vw); }
+    }
+
+    /* ── AD BANNER TOP ── */
+    .ad-banner {
+      background: var(--card);
+      border: 1px dashed var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ad-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255,255,255,0.01) 10px,
+        rgba(255,255,255,0.01) 20px
+      );
+    }
+
+    .ad-label {
+      position: absolute;
+      top: 6px;
+      left: 10px;
+      font-size: 10px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.6;
+    }
+
+    .ad-top-banner {
+      height: 90px;
+      margin: 0 5%;
+    }
+
+    .ad-top-banner .ad-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      margin: 20px 5%;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 16px;
+    }
+
+    .hero-main {
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%),
+        url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=80') center/cover;
+      border-radius: 12px;
+      min-height: 380px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s;
+      border: 1px solid var(--border);
+    }
+
+    .hero-main:hover { transform: scale(1.01); }
+
+    .hero-main::before {
+      content: 'عاجل';
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--red);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 900;
+      padding: 4px 12px;
+      border-radius: 4px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+
+    .hero-cat {
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .hero-title {
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1.3;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 14px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .hero-side {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .side-card {
+      background: var(--card);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      gap: 12px;
+      padding: 12px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      flex: 1;
+    }
+
+    .side-card:hover {
+      border-color: var(--red);
+      background: var(--card2);
+    }
+
+    .side-img {
+      width: 80px;
+      height: 70px;
+      border-radius: 8px;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: var(--border);
+    }
+
+    .side-content { flex: 1; }
+
+    .side-cat {
+      font-size: 11px;
+      color: var(--red);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .side-title {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--text);
+    }
+
+    .side-date {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* ── MAIN LAYOUT ── */
+    .main-wrap {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 24px;
+      margin: 24px 5%;
+    }
+
+    /* ── SECTION HEADER ── */
+    .section-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .section-line {
+      width: 4px;
+      height: 24px;
+      background: var(--red);
+      border-radius: 2px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    .section-en {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 14px;
+      color: var(--muted);
+      letter-spacing: 2px;
+    }
+
+    .see-all {
+      margin-right: auto;
+      font-size: 13px;
+      color: var(--accent);
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* ── CARDS GRID ── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .card:hover {
+      border-color: var(--red);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(230,48,48,0.15);
+    }
+
+    .card-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      background: var(--card2);
+      display: block;
+    }
+
+    .card-body {
+      padding: 14px;
+    }
+
+    .card-cat {
+      font-size: 11px;
+      color: var(--red);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-date {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .card-views {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ── SCORES WIDGET ── */
+    .scores-section {
+      background: var(--card);
+      border-radius: 10px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      margin-bottom: 20px;
+    }
+
+    .match-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .match-row:last-child { border-bottom: none; }
+
+    .team-name {
+      font-size: 14px;
+      font-weight: 700;
+      width: 100px;
+      text-align: center;
+    }
+
+    .score-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .score {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      color: #fff;
+    }
+
+    .score-sep {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      color: var(--muted);
+    }
+
+    .match-status {
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    .live { background: var(--red); color: #fff; animation: pulse 2s infinite; }
+    .ended { background: var(--border); color: var(--muted); }
+    .upcoming { background: rgba(0,212,255,0.15); color: var(--accent); }
+
+    /* ── SIDEBAR ── */
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+
+    .widget {
+      background: var(--card);
+      border-radius: 10px;
+      padding: 18px;
+      border: 1px solid var(--border);
+    }
+
+    /* ── AD SIDEBAR ── */
+    .ad-sidebar {
+      height: 250px;
+      border-radius: 10px;
+    }
+
+    .ad-inline {
+      height: 100px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    /* ── TRENDING ── */
+    .trending-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+    }
+
+    .trending-item:last-child { border-bottom: none; }
+
+    .trend-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      color: var(--border);
+      line-height: 1;
+      min-width: 28px;
+    }
+
+    .trending-item:nth-child(1) .trend-num { color: var(--red); }
+    .trending-item:nth-child(2) .trend-num { color: var(--gold); }
+    .trending-item:nth-child(3) .trend-num { color: var(--muted); }
+
+    .trend-title {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--text);
+    }
+
+    .trend-cat {
+      font-size: 11px;
+      color: var(--red);
+      margin-top: 4px;
+    }
+
+    /* ── VIDEO SECTION ── */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .video-card {
+      background: var(--card);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .video-card:hover { border-color: var(--red); transform: translateY(-3px); }
+
+    .video-thumb {
+      width: 100%;
+      height: 140px;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-btn {
+      width: 48px;
+      height: 48px;
+      background: rgba(230,48,48,0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      transition: transform 0.2s;
+    }
+
+    .video-card:hover .play-btn { transform: scale(1.1); }
+
+    .video-duration {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      background: rgba(0,0,0,0.8);
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Barlow Condensed', sans-serif;
+    }
+
+    .video-body {
+      padding: 12px;
+    }
+
+    .video-title {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .video-views {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--darker);
+      border-top: 2px solid var(--border);
+      margin-top: 40px;
+      padding: 40px 5%;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .footer-about p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-top: 12px;
+    }
+
+    .footer-col h4 {
+      font-size: 15px;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--red);
+      display: inline-block;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 14px;
+      color: var(--muted);
+      text-decoration: none;
+      margin-bottom: 8px;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover { color: var(--red); }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .social-btn {
+      width: 36px;
+      height: 36px;
+      background: var(--border);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .social-btn:hover { background: var(--red); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .main-wrap { grid-template-columns: 1fr; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .video-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .header-top { flex-direction: column; }
+      nav { justify-content: center; }
+      .video-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero-title { font-size: 20px; }
+    }
+
+    /* Placeholder images */
+    .img-ph {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+    }
+
+    .img-ph2 {
+      background: linear-gradient(135deg, #1a1a0a 0%, #2e1a0a 50%, #3d2b0a 100%);
+    }
+
+    .img-ph3 {
+      background: linear-gradient(135deg, #0a1a1a 0%, #0a2e2e 50%, #0a3d3d 100%);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════ HEADER ══════════════ -->
+<header>
+  <div class="header-top">
+    <div class="logo">
+      <div class="logo-icon">SP</div>
+      <div class="logo-text">
+        <span class="logo-ar">سبورت بلس</span>
+        <span class="logo-en">SPORT PLUS</span>
+      </div>
+    </div>
+    <nav>
+      <a href="#" class="active">الرئيسية</a>
+      <a href="#">كرة القدم</a>
+      <a href="#">السلة</a>
+      <a href="#">الترفيه</a>
+      <a href="#">الفيديو</a>
+      <a href="#">اتصل بنا</a>
+    </nav>
+    <button class="lang-btn" onclick="this.textContent = this.textContent==='EN' ? 'ع' : 'EN'">EN</button>
+  </div>
+</header>
+
+<!-- ══════════════ TICKER ══════════════ -->
+<div class="ticker-wrap">
+  <span class="ticker-label">🔴 عاجل</span>
+  <span class="ticker-content">
+    ⚽ ريال مدريد يفوز على برشلونة 3-1 في كلاسيكو مثير &nbsp;|&nbsp;
+    🏆 المنتخب السعودي يتأهل لنصف نهائي كأس العالم &nbsp;|&nbsp;
+    🎯 محمد صلاح يسجل هدفه الـ 50 في الدوري الإنجليزي &nbsp;|&nbsp;
+    🏀 NBA Finals: Lakers vs Celtics tonight 8PM &nbsp;|&nbsp;
+    🎾 نادال يعلن اعتزاله اللعب بعد مسيرة رائعة &nbsp;|&nbsp;
+    🥊 نزال الملاكمة الكبير الأسبوع القادم في لاس فيغاس
+  </span>
+</div>
+
+<!-- ══════════════ AD BANNER TOP ══════════════ -->
+<div style="margin: 16px 5% 0;">
+  <div class="ad-banner ad-top-banner" style="border-radius: 10px; padding: 16px;">
+    <span class="ad-label">إعلان | Advertisement</span>
+    <div class="ad-inner">
+      <!-- ✅ ضع كود AdSense هنا: إعلان بانر عرضي 728x90 أو responsive -->
+      <!--
+      <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+        data-ad-slot="XXXXXXXXXX"
+        data-ad-format="auto"
+        data-full-width-responsive="true">
+      </ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      -->
+      <div style="font-size:15px; font-weight:700;">📢 مساحة إعلانية — Google AdSense 728×90</div>
+      <div style="font-size:12px; opacity:0.6;">أضف كود AdSense هنا بعد الموافقة من Google</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ HERO ══════════════ -->
+<div class="hero">
+  <div class="hero-main">
+    <div class="hero-cat">⚽ كرة القدم • Football</div>
+    <div class="hero-title">ريال مدريد يسحق برشلونة في كلاسيكو تاريخي بالبرنابيو بثلاثة أهداف مقابل هدف</div>
+    <div class="hero-meta">
+      <span>📅 2 مايو 2026</span>
+      <span>👁 128,400 مشاهدة</span>
+      <span>💬 340 تعليق</span>
+    </div>
+  </div>
+  <div class="hero-side">
+    <div class="side-card">
+      <div class="side-img img-ph">🏀</div>
+      <div class="side-content">
+        <div class="side-cat">🏀 Basketball</div>
+        <div class="side-title">LeBron James يقود Lakers للفوز في مباراة حاسمة</div>
+        <div class="side-date">منذ ساعتين</div>
+      </div>
+    </div>
+    <div class="side-card">
+      <div class="side-img img-ph2">🎾</div>
+      <div class="side-content">
+        <div class="side-cat">🎾 التنس</div>
+        <div class="side-title">نادال يودع الملاعب بعد 22 لقباً في غراند سلام</div>
+        <div class="side-date">منذ 4 ساعات</div>
+      </div>
+    </div>
+    <div class="side-card">
+      <div class="side-img img-ph3">🥊</div>
+      <div class="side-content">
+        <div class="side-cat">🥊 ملاكمة</div>
+        <div class="side-title">نزال الملاكمة الأضخم في 2026 يقترب</div>
+        <div class="side-date">منذ 6 ساعات</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ SCORES ══════════════ -->
+<div style="margin: 0 5% 24px;">
+  <div class="section-head">
+    <div class="section-line"></div>
+    <div>
+      <div class="section-title">نتائج المباريات</div>
+      <div class="section-en">LIVE SCORES</div>
+    </div>
+    <a class="see-all" href="#">عرض الكل ◀</a>
+  </div>
+  <div class="scores-section">
+    <div class="match-row">
+      <div class="team-name">ريال مدريد</div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div class="score-box"><span class="score">3</span><span class="score-sep">—</span><span class="score">1</span></div>
+        <span class="match-status live">مباشر 78'</span>
+      </div>
+      <div class="team-name">برشلونة</div>
+    </div>
+    <div class="match-row">
+      <div class="team-name">ليفربول</div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div class="score-box"><span class="score">2</span><span class="score-sep">—</span><span class="score">2</span></div>
+        <span class="match-status ended">انتهت</span>
+      </div>
+      <div class="team-name">مانشستر سيتي</div>
+    </div>
+    <div class="match-row">
+      <div class="team-name">الأهلي</div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div class="score-box"><span class="score">vs</span></div>
+        <span class="match-status upcoming">20:00</span>
+      </div>
+      <div class="team-name">الهلال</div>
+    </div>
+    <div class="match-row">
+      <div class="team-name">PSG</div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div class="score-box"><span class="score">1</span><span class="score-sep">—</span><span class="score">0</span></div>
+        <span class="match-status ended">انتهت</span>
+      </div>
+      <div class="team-name">Bayern Munich</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ MAIN CONTENT + SIDEBAR ══════════════ -->
+<div class="main-wrap">
+  <div class="main-content">
+
+    <!-- SECTION: أخبار الرياضة -->
+    <div class="section-head">
+      <div class="section-line"></div>
+      <div>
+        <div class="section-title">أحدث الأخبار</div>
+        <div class="section-en">LATEST NEWS</div>
+      </div>
+      <a class="see-all" href="#">عرض الكل ◀</a>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-img img-ph" style="height:160px;">⚽</div>
+        <div class="card-body">
+          <div class="card-cat">⚽ كرة القدم</div>
+          <div class="card-title">مبابي يسجل هاتريك ويقود فرنسا للتأهل لنهائي كأس العالم 2026</div>
+          <div class="card-footer">
+            <span class="card-date">منذ ساعة</span>
+            <span class="card-views">👁 45,200</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img img-ph2" style="height:160px;">🏆</div>
+        <div class="card-body">
+          <div class="card-cat">🏆 دوري أبطال أوروبا</div>
+          <div class="card-title">مانشستر سيتي يتأهل لنصف النهائي بفوز كاسح على ميلان</div>
+          <div class="card-footer">
+            <span class="card-date">منذ 3 ساعات</span>
+            <span class="card-views">👁 31,100</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img img-ph3" style="height:160px;">🏀</div>
+        <div class="card-body">
+          <div class="card-cat">🏀 NBA</div>
+          <div class="card-title">Stephen Curry يحطم رقم قياسي جديد في تسجيل ثلاثيات الـ NBA</div>
+          <div class="card-footer">
+            <span class="card-date">منذ 5 ساعات</span>
+            <span class="card-views">👁 28,600</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img img-ph" style="height:160px; background: linear-gradient(135deg, #1a0a1a, #2e0a2e, #3d0a3d);">🎽</div>
+        <div class="card-body">
+          <div class="card-cat">🎽 الدوري السعودي</div>
+          <div class="card-title">رونالدو يتعادل مع الهلال بهدف في الوقت بدل الضائع في مباراة مثيرة</div>
+          <div class="card-footer">
+            <span class="card-date">منذ 7 ساعات</span>
+            <span class="card-views">👁 89,400</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ AD: إعلان داخل المحتوى -->
+    <div class="ad-banner ad-inline">
+      <span class="ad-label">إعلان</span>
+      <!-- ✅ ضع كود AdSense هنا: إعلان مدمج مع المحتوى -->
+      <!--
+      <ins class="adsbygoogle" style="display:block; text-align:center;"
+        data-ad-layout="in-article"
+        data-ad-format="fluid"
+        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+        data-ad-slot="XXXXXXXXXX">
+      </ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      -->
+      <div>📢 Google AdSense — إعلان مدمج مع المحتوى (In-Article Ad)</div>
+    </div>
+
+    <!-- SECTION: Videos -->
+    <div class="section-head">
+      <div class="section-line"></div>
+      <div>
+        <div class="section-title">أحدث الفيديوهات</div>
+        <div class="section-en">LATEST VIDEOS</div>
+      </div>
+      <a class="see-all" href="#">عرض الكل ◀</a>
+    </div>
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-thumb img-ph">
+          <div class="play-btn">▶</div>
+          <span class="video-duration">05:32</span>
+        </div>
+        <div class="video-body">
+          <div class="video-title">أهداف كلاسيكو ريال مدريد وبرشلونة</div>
+          <div class="video-views">👁 220,000 مشاهدة</div>
+        </div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb img-ph2">
+          <div class="play-btn">▶</div>
+          <span class="video-duration">03:18</span>
+        </div>
+        <div class="video-body">
+          <div class="video-title">أفضل لقطات NBA الأسبوع الماضي</div>
+          <div class="video-views">👁 98,500 مشاهدة</div>
+        </div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb img-ph3">
+          <div class="play-btn">▶</div>
+          <span class="video-duration">07:45</span>
+        </div>
+        <div class="video-body">
+          <div class="video-title">تحليل تكتيكي: سر نجاح ريال مدريد</div>
+          <div class="video-views">👁 67,200 مشاهدة</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION: ترفيه -->
+    <div class="section-head">
+      <div class="section-line"></div>
+      <div>
+        <div class="section-title">ترفيه وثقافة رياضية</div>
+        <div class="section-en">SPORTS ENTERTAINMENT</div>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-img img-ph" style="height:140px; background:linear-gradient(135deg,#0a1a0a,#0a3d1a);">🎮</div>
+        <div class="card-body">
+          <div class="card-cat">🎮 رياضات إلكترونية</div>
+          <div class="card-title">بطولة الألعاب الإلكترونية العالمية تُعقد في دبي 2026</div>
+          <div class="card-footer">
+            <span class="card-date">أمس</span>
+            <span class="card-views">👁 18,000</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img img-ph2" style="height:140px;">🎬</div>
+        <div class="card-body">
+          <div class="card-cat">🎬 وثائقيات</div>
+          <div class="card-title">وثائقي مرتقب عن مسيرة محمد صلاح من مصر إلى العالمية</div>
+          <div class="card-footer">
+            <span class="card-date">أمس</span>
+            <span class="card-views">👁 55,800</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════ SIDEBAR ══════════════ -->
+  <div class="sidebar">
+
+    <!-- AD Sidebar -->
+    <div class="ad-banner ad-sidebar" style="border-radius:10px; padding:16px;">
+      <span class="ad-label">إعلان</span>
+      <!-- ✅ ضع كود AdSense هنا: إعلان مستطيل 300x250 -->
+      <!--
+      <ins class="adsbygoogle"
+        style="display:inline-block;width:300px;height:250px"
+        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+        data-ad-slot="XXXXXXXXXX">
+      </ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      -->
+      <div style="text-align:center;">
+        <div style="font-size:14px; font-weight:700;">📢 AdSense</div>
+        <div style="font-size:12px; margin-top:6px; opacity:0.6;">300 × 250 px</div>
+      </div>
+    </div>
+
+    <!-- Trending -->
+    <div class="widget">
+      <div class="section-head" style="margin-bottom:14px;">
+        <div class="section-line"></div>
+        <div>
+          <div class="section-title" style="font-size:17px;">الأكثر قراءة</div>
+          <div class="section-en">TRENDING</div>
+        </div>
+      </div>
+      <div class="trending-item">
+        <div class="trend-num">1</div>
+        <div>
+          <div class="trend-title">ريال مدريد يحسم الكلاسيكو بثلاثية مقابل هدف</div>
+          <div class="trend-cat">⚽ كرة القدم</div>
+        </div>
+      </div>
+      <div class="trending-item">
+        <div class="trend-num">2</div>
+        <div>
+          <div class="trend-title">رونالدو يكشف عن مستقبله بعد نهاية الموسم</div>
+          <div class="trend-cat">🎽 الدوري السعودي</div>
+        </div>
+      </div>
+      <div class="trending-item">
+        <div class="trend-num">3</div>
+        <div>
+          <div class="trend-title">نادال يودع كرة المضرب رسمياً</div>
+          <div class="trend-cat">🎾 التنس</div>
+        </div>
+      </div>
+      <div class="trending-item">
+        <div class="trend-num">4</div>
+        <div>
+          <div class="trend-title">LeBron James يمدد عقده مع Lakers لموسمين</div>
+          <div class="trend-cat">🏀 NBA</div>
+        </div>
+      </div>
+      <div class="trending-item">
+        <div class="trend-num">5</div>
+        <div>
+          <div class="trend-title">بطولة كأس العرب 2026: جدول المباريات كاملاً</div>
+          <div class="trend-cat">🏆 كأس العرب</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AD Sidebar 2 -->
+    <div class="ad-banner" style="height:200px; border-radius:10px; padding:16px;">
+      <span class="ad-label">إعلان</span>
+      <!-- ✅ ضع كود AdSense هنا: إعلان 300x200 -->
+      <div style="text-align:center;">
+        <div style="font-size:14px; font-weight:700;">📢 AdSense</div>
+        <div style="font-size:12px; margin-top:6px; opacity:0.6;">300 × 200 px</div>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="widget">
+      <div class="section-head" style="margin-bottom:14px;">
+        <div class="section-line"></div>
+        <div class="section-title" style="font-size:17px;">النشرة الإخبارية</div>
+      </div>
+      <p style="font-size:13px; color:var(--muted); margin-bottom:14px; line-height:1.7;">اشترك لتصلك أحدث أخبار الرياضة يومياً</p>
+      <input type="email" placeholder="بريدك الإلكتروني" style="width:100%; background:var(--dark); border:1px solid var(--border); color:var(--text); padding:10px 12px; border-radius:8px; font-family:Cairo,sans-serif; font-size:14px; margin-bottom:10px; outline:none;" />
+      <button style="width:100%; background:var(--red); color:#fff; border:none; padding:10px; border-radius:8px; font-family:Cairo,sans-serif; font-size:14px; font-weight:700; cursor:pointer;">اشترك الآن ←</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════ FOOTER AD ══════════════ -->
+<div style="margin: 0 5% 20px;">
+  <div class="ad-banner" style="height:90px; border-radius:10px; padding:16px;">
+    <span class="ad-label">إعلان</span>
+    <!-- ✅ ضع كود AdSense هنا: إعلان footer بانر 728x90 -->
+    <div>📢 Google AdSense — Footer Banner 728×90</div>
+  </div>
+</div>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-about">
+      <div class="logo">
+        <div class="logo-icon">SP</div>
+        <div class="logo-text">
+          <span class="logo-ar">سبورت بلس</span>
+          <span class="logo-en">SPORT PLUS</span>
+        </div>
+      </div>
+      <p>منصتك الأولى لأخبار الرياضة والترفيه باللغتين العربية والإنجليزية. نقدم أحدث الأخبار ونتائج المباريات والتحليلات الرياضية.</p>
+      <div class="social-links">
+        <a class="social-btn" href="#">𝕏</a>
+        <a class="social-btn" href="#">f</a>
+        <a class="social-btn" href="#">▶</a>
+        <a class="social-btn" href="#">📷</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>أقسام الموقع</h4>
+      <a href="#">كرة القدم</a>
+      <a href="#">كرة السلة</a>
+      <a href="#">التنس</a>
+      <a href="#">الملاكمة</a>
+      <a href="#">الترفيه</a>
+    </div>
+    <div class="footer-col">
+      <h4>روابط مفيدة</h4>
+      <a href="#">من نحن</a>
+      <a href="#">سياسة الخصوصية</a>
+      <a href="#">شروط الاستخدام</a>
+      <a href="#">اتصل بنا</a>
+      <a href="#">الإعلان معنا</a>
+    </div>
+    <div class="footer-col">
+      <h4>تواصل معنا</h4>
+      <a href="#">📧 info@sportplus.com</a>
+      <a href="#">📞 +966 5X XXX XXXX</a>
+      <a href="#">📍 الرياض، المملكة العربية السعودية</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 سبورت بلس — جميع الحقوق محفوظة</span>
+    <span>صُنع بـ ❤️ للرياضة العربية</span>
+  </div>
+</footer>
+
+</body>
+</html>
